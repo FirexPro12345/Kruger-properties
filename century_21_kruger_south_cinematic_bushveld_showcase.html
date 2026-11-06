@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Century 21 Kruger South | Luxury Safari & Bushveld Real Estate</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        c21Black: '#0B0B0D',
+                        c21Charcoal: '#141418',
+                        c21Slate: '#1D1E24',
+                        c21Card: '#181920',
+                        c21Border: '#2E303B',
+                        c21Gold: '#C5A880',         /* Signature Century 21 Metallic Gold */
+                        c21GoldHover: '#D8BC93',
+                        c21GoldBright: '#E3CDA8',
+                        c21Muted: '#9699A6',
+                        c21Sand: '#F5F5F7'
+                    },
+                    fontFamily: {
+                        c21: ['"Montserrat"', 'sans-serif'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2E303B;
+            border-radius: 4px;
+            border: 1px solid rgba(197, 168, 128, 0.4);
+        }
+
+        /* Century 21 Luxury Glassmorphism */
+        .c21-glass-panel {
+            background: rgba(20, 20, 24, 0.86);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(197, 168, 128, 0.28);
+        }
+
+        .c21-glass-card {
+            background: rgba(14, 14, 18, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 30px rgba(197, 168, 128, 0.18), 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(135deg, #C5A880, #54442F, #C5A880) 1;
+        }
+    </style>
+</head>
+<body class="bg-c21Black text-slate-100 font-sans antialiased selection:bg-c21Gold selection:text-black overflow-x-hidden">
+
+    <!-- INITIAL PRELOADER -->
+    <div id="loadingScreen" class="fixed inset-0 z-50 bg-c21Black flex flex-col items-center justify-center transition-opacity duration-700 pointer-events-auto">
+        <div class="relative flex flex-col items-center px-4 text-center">
+            
+            <!-- Authentic Century 21 Kruger South Logo Emblem -->
+            <div class="flex flex-col items-center mb-6">
+                <div class="flex items-start">
+                    <span class="font-c21 font-extrabold text-3xl md:text-4xl tracking-tight text-white uppercase">CENTURY 21</span>
+                    <span class="text-xs font-bold text-c21Gold ml-1 -mt-0.5">®</span>
+                </div>
+                <span class="font-c21 font-light text-xs md:text-sm tracking-[0.34em] text-c21Gold uppercase mt-1">Kruger South</span>
+            </div>
+
+            <p class="font-cinzel text-c21Muted text-xs tracking-[0.25em] uppercase mb-6">Unrivaled Kruger Border & Bushveld Living</p>
+            
+            <div class="w-64 h-1 bg-c21Slate rounded-full overflow-hidden">
+                <div id="loadProgressBar" class="h-full bg-c21Gold w-1/3 transition-all duration-300"></div>
+            </div>
+            <p id="loadingStatusText" class="text-[11px] uppercase tracking-widest text-c21Gold/80 mt-4">Calibrating 3D Safari Tour...</p>
+        </div>
+    </div>
+
+    <!-- STICKY LUXURY NAVIGATION -->
+    <header id="mainNav" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-c21Black/90 backdrop-blur-md border-b border-c21Border/50 py-3.5 px-6 md:px-12 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#safari-tour" class="flex flex-col group">
+            <div class="flex items-start">
+                <span class="font-c21 font-extrabold text-xl md:text-2xl tracking-tight text-white uppercase group-hover:text-c21Gold transition-colors">CENTURY 21</span>
+                <span class="text-[9px] font-bold text-c21Gold ml-0.5">®</span>
+            </div>
+            <span class="font-c21 font-light text-[9.5px] tracking-[0.38em] text-c21Gold uppercase -mt-0.5">Kruger South</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest text-slate-300 font-medium">
+            <a href="#safari-tour" class="hover:text-c21Gold transition-colors relative py-1 hover:border-b-2 hover:border-c21Gold">3D Tour</a>
+            <a href="#property-specs" class="hover:text-c21Gold transition-colors relative py-1 hover:border-b-2 hover:border-c21Gold">Features</a>
+            <a href="#exclusive-portfolio" class="hover:text-c21Gold transition-colors relative py-1 hover:border-b-2 hover:border-c21Gold">Portfolio</a>
+            <a href="#team-agents" class="hover:text-c21Gold transition-colors relative py-1 hover:border-b-2 hover:border-c21Gold">Brokers</a>
+            <a href="#agency-info" class="hover:text-c21Gold transition-colors relative py-1 hover:border-b-2 hover:border-c21Gold">Malelane HQ</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="flex items-center space-x-3">
+            <a href="tel:+27828014888" class="hidden sm:inline-flex items-center space-x-2 text-xs text-white hover:text-c21Gold transition-colors border border-c21Border hover:border-c21Gold px-3.5 py-2 rounded-full">
+                <i class="fa-solid fa-phone text-[10px] text-c21Gold"></i>
+                <span class="font-medium">+27 82 801 4888</span>
+            </a>
+            <button onclick="openBookingModal('Century 21 VIP Bushveld Inspection')" class="bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 font-bold text-xs tracking-wider uppercase px-4 md:px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 transform active:scale-95">
+                Book Private Viewing
+            </button>
+        </div>
+    </header>
+
+    <!-- SECTION 1: 460vh SCROLL TRACK FOR PINNED 3D VIDEO -->
+    <section id="safari-tour" class="relative w-full" style="height: 460vh;">
+        <!-- Pinned Sticky 100vw x 100vh Viewport -->
+        <div id="stickyStage" class="sticky top-0 left-0 w-full h-screen overflow-hidden bg-black flex items-center justify-center">
+            
+            <!-- Video Surface -->
+            <video 
+                id="scrubVideo" 
+                class="w-full h-full object-cover select-none pointer-events-none"
+                preload="auto" 
+                muted 
+                playsinline 
+                webkit-playsinline>
+                <source src="gemini_generated_video_3213d91c.mp4" type="video/mp4">
+                <source src="video_1.mp4" type="video/mp4">
+            </video>
+
+            <!-- Luxury Dark Vignette & Gold Atmospheric Tint -->
+            <div class="absolute inset-0 bg-gradient-to-t from-c21Black via-transparent to-c21Black/75 pointer-events-none"></div>
+
+            <!-- Top HUD / Timeline Monitor -->
+            <div class="absolute top-20 left-6 right-6 md:left-12 md:right-12 z-20 flex justify-between items-center pointer-events-none">
+                <div class="flex items-center space-x-3">
+                    <div class="w-2.5 h-2.5 rounded-full bg-c21Gold animate-pulse"></div>
+                    <span class="font-cinzel text-xs tracking-widest text-c21Gold uppercase">Architectural Walkthrough Scrub</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-xs text-c21Gold font-mono" id="timeCounter">00:00 / 00:08</span>
+                    <div class="w-24 md:w-36 h-1.5 bg-black/60 rounded-full overflow-hidden border border-c21Border">
+                        <div id="hudScrollFill" class="h-full bg-c21Gold w-0 transition-all duration-100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Floating Controls: Local Video File Picker & Audio Ambience -->
+            <div class="absolute bottom-6 right-6 z-30 flex items-center space-x-2">
+                <label for="videoFileInput" title="Select your local MP4 file to load directly" class="cursor-pointer c21-glass-card hover:bg-c21Slate text-slate-200 hover:text-white px-3 py-2 rounded-lg text-xs flex items-center space-x-2 transition-all border border-c21Border">
+                    <i class="fa-solid fa-film text-c21Gold"></i>
+                    <span class="hidden sm:inline">Swap Local Video</span>
+                </label>
+                <input type="file" id="videoFileInput" accept="video/mp4,video/*" class="hidden">
+
+                <button id="audioToggleBtn" onclick="toggleBushveldAudio()" class="c21-glass-card hover:bg-c21Slate text-slate-200 hover:text-white px-3 py-2 rounded-lg text-xs flex items-center space-x-2 transition-all border border-c21Border">
+                    <i id="audioIcon" class="fa-solid fa-volume-xmark text-c21Gold"></i>
+                    <span id="audioLabel" class="hidden sm:inline">Ambience</span>
+                </button>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div id="scrollCtaPrompt" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none transition-opacity duration-500">
+                <span class="text-[11px] font-cinzel tracking-[0.3em] uppercase text-c21Gold block mb-2">Scroll To Explore Sanctuary</span>
+                <div class="w-5 h-8 border-2 border-c21Gold/60 rounded-full mx-auto flex justify-center p-1">
+                    <div class="w-1 h-2 bg-c21Gold rounded-full animate-bounce"></div>
+                </div>
+            </div>
+
+            <!-- FLOATING NARRATIVE MILESTONES -->
+            <!-- Milestone 1: 0% - 20% -->
+            <div id="milestone-1" class="absolute z-20 max-w-xl left-6 md:left-16 bottom-20 md:bottom-28 c21-glass-panel p-6 md:p-8 rounded-2xl gold-glow transition-all duration-700 opacity-100 translate-y-0">
+                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-black/60 border-l-2 border-c21Gold text-c21Gold text-[10px] tracking-widest uppercase mb-3">
+                    <i class="fa-solid fa-gem text-c21Gold"></i>
+                    <span>Exclusive Mandate • Marloth Riverfront</span>
+                </div>
+                <h1 class="font-c21 font-extrabold text-2xl md:text-4xl text-white tracking-tight uppercase mb-2">
+                    Crocodile Riverfront Sanctuary
+                </h1>
+                <div class="w-16 h-0.5 bg-c21Gold mb-3"></div>
+                <p class="font-serif text-lg md:text-xl text-slate-200 leading-relaxed italic mb-4">
+                    “Direct vantage into the Kruger National Park where herds cross the sandbanks right before your living room.”
+                </p>
+                <div class="flex items-center space-x-6 text-xs text-c21Gold font-medium">
+                    <span><i class="fa-solid fa-bed mr-1.5 text-white"></i> 4 Luxury Suites</span>
+                    <span><i class="fa-solid fa-bath mr-1.5 text-white"></i> 4.5 Bathrooms</span>
+                    <span><i class="fa-solid fa-vector-square mr-1.5 text-white"></i> 680 m² Under Roof</span>
+                </div>
+            </div>
+
+            <!-- Milestone 2: 25% - 50% -->
+            <div id="milestone-2" class="absolute z-20 max-w-xl right-6 md:right-16 bottom-20 md:bottom-28 c21-glass-panel p-6 md:p-8 rounded-2xl gold-glow transition-all duration-700 opacity-0 translate-y-8 pointer-events-none">
+                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-black/60 border-l-2 border-c21Gold text-c21Gold text-[10px] tracking-widest uppercase mb-3">
+                    <i class="fa-solid fa-martini-glass-citrus text-c21Gold"></i>
+                    <span>Interior Architecture</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-2xl md:text-4xl text-white tracking-tight uppercase mb-2">
+                    Open Bush Hospitality & Bar
+                </h2>
+                <div class="w-16 h-0.5 bg-c21Gold mb-3"></div>
+                <p class="font-serif text-lg md:text-xl text-slate-200 leading-relaxed italic mb-4">
+                    Handcrafted hardwood bar, mezzanine reading gallery, and open-plan lounges flowing directly through glass bi-folds into the wild.
+                </p>
+                <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 border-t border-c21Border pt-3">
+                    <div><span class="text-c21Gold">Finishes:</span> Kiaat & African Teak</div>
+                    <div><span class="text-c21Gold">Airflow:</span> Cross-ventilation breezeway</div>
+                </div>
+            </div>
+
+            <!-- Milestone 3: 55% - 75% -->
+            <div id="milestone-3" class="absolute z-20 max-w-xl left-6 md:left-16 bottom-20 md:bottom-28 c21-glass-panel p-6 md:p-8 rounded-2xl gold-glow transition-all duration-700 opacity-0 translate-y-8 pointer-events-none">
+                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-black/60 border-l-2 border-c21Gold text-c21Gold text-[10px] tracking-widest uppercase mb-3">
+                    <i class="fa-solid fa-water-ladder text-c21Gold"></i>
+                    <span>Private Leisure</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-2xl md:text-4xl text-white tracking-tight uppercase mb-2">
+                    Deck, Pool & Thatched Boma
+                </h2>
+                <div class="w-16 h-0.5 bg-c21Gold mb-3"></div>
+                <p class="font-serif text-lg md:text-xl text-slate-200 leading-relaxed italic mb-4">
+                    Overlook the river sandbars from your elevated pool deck. Watch hippos, elephants, and storks with a sundowner in hand.
+                </p>
+                <div class="flex items-center space-x-4 text-xs text-slate-300">
+                    <span class="bg-black/50 px-3 py-1.5 rounded-lg border border-c21Border"><i class="fa-solid fa-sun mr-1 text-c21Gold"></i> River Deck</span>
+                    <span class="bg-black/50 px-3 py-1.5 rounded-lg border border-c21Border"><i class="fa-solid fa-fire mr-1 text-c21Gold"></i> Open Fire Pit</span>
+                </div>
+            </div>
+
+            <!-- Milestone 4: 80% - 100% -->
+            <div id="milestone-4" class="absolute z-20 max-w-xl right-6 md:right-16 bottom-20 md:bottom-28 c21-glass-panel p-6 md:p-8 rounded-2xl gold-glow transition-all duration-700 opacity-0 translate-y-8 pointer-events-none">
+                <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-black/60 border-l-2 border-c21Gold text-c21Gold text-[10px] tracking-widest uppercase mb-3">
+                    <i class="fa-solid fa-trophy text-c21Gold"></i>
+                    <span>Trophy Property</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-2xl md:text-4xl text-white tracking-tight uppercase mb-2">
+                    Kruger Park Boundary Living
+                </h2>
+                <div class="w-16 h-0.5 bg-c21Gold mb-3"></div>
+                <p class="font-serif text-lg md:text-xl text-slate-200 leading-relaxed italic mb-4">
+                    Rare, unrepeatable real estate right along the southern boundary of Africa’s greatest game park.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <button onclick="openBookingModal('Century 21 Marloth Riverfront Flagship (R12.5M)')" class="bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 font-bold text-xs uppercase px-5 py-3 rounded-full transition-all shadow-md">
+                        Inquire On This Lodge
+                    </button>
+                    <span class="font-mono text-sm font-bold text-c21Gold">R 12,500,000</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: SPECIFICATIONS & FEATURES -->
+    <section id="property-specs" class="relative py-28 px-6 md:px-12 bg-c21Charcoal border-t border-c21Border z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <span class="font-c21 font-bold text-xs tracking-tight text-white uppercase">CENTURY 21</span>
+                    <span class="text-[9px] font-bold text-c21Gold">®</span>
+                    <span class="font-c21 font-light text-[10px] tracking-[0.25em] text-c21Gold uppercase">Standards</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-3xl md:text-5xl uppercase tracking-tight text-white mb-4">Crafted For The Wild. Built To Last.</h2>
+                <div class="w-20 h-0.5 bg-c21Gold mx-auto"></div>
+            </div>
+
+            <!-- 4 Column Feature Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="c21-glass-panel p-8 rounded-2xl relative group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-c21Black flex items-center justify-center text-c21Gold text-2xl mb-6 group-hover:scale-110 transition-transform border border-c21Border">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="font-c21 font-bold text-lg uppercase text-white mb-2">Crocodile River Frontage</h3>
+                    <p class="text-c21Muted text-sm leading-relaxed">
+                        Uninterrupted views into the Kruger National Park. Constant game sightings from the comfort of private viewing decks.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="c21-glass-panel p-8 rounded-2xl relative group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-c21Black flex items-center justify-center text-c21Gold text-2xl mb-6 group-hover:scale-110 transition-transform border border-c21Border">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-c21 font-bold text-lg uppercase text-white mb-2">Full Solar Independence</h3>
+                    <p class="text-c21Muted text-sm leading-relaxed">
+                        Complete off-grid solar infrastructure, 15kVA inverter systems, automated backup water tanks, and borehole filtration.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="c21-glass-panel p-8 rounded-2xl relative group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-c21Black flex items-center justify-center text-c21Gold text-2xl mb-6 group-hover:scale-110 transition-transform border border-c21Border">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-c21 font-bold text-lg uppercase text-white mb-2">Safari Rental Yields</h3>
+                    <p class="text-c21Muted text-sm leading-relaxed">
+                        Prime positioning for lucrative high-occupancy international safari holiday rentals with turnkey property management available.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="c21-glass-panel p-8 rounded-2xl relative group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-c21Black flex items-center justify-center text-c21Gold text-2xl mb-6 group-hover:scale-110 transition-transform border border-c21Border">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-c21 font-bold text-lg uppercase text-white mb-2">Conservation Security</h3>
+                    <p class="text-c21Muted text-sm leading-relaxed">
+                        Dedicated ranger patrols, thermal boundary surveillance, and strict environmental covenants ensuring unspoiled wilderness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EXCLUSIVE KRUGER SOUTH PORTFOLIO (WITH REAL-TIME FILTER) -->
+    <section id="exclusive-portfolio" class="py-24 px-6 md:px-12 bg-c21Black relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-2">
+                        <span class="font-c21 font-bold text-xs tracking-tight text-white uppercase">CENTURY 21</span>
+                        <span class="text-[9px] font-bold text-c21Gold">®</span>
+                        <span class="font-c21 font-light text-[10px] tracking-[0.25em] text-c21Gold uppercase">Curated Listings</span>
+                    </div>
+                    <h2 class="font-c21 font-extrabold text-3xl md:text-5xl uppercase tracking-tight text-white">Exclusive Kruger South Portfolio</h2>
+                    <div class="w-16 h-0.5 bg-c21Gold mt-3"></div>
+                    <p class="text-c21Muted text-sm mt-2">Marloth Park • Malelane • Komatipoort • Hectorspruit</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="https://www.property24.com/for-sale/agency/century-21-kruger-south/25404" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-c21Gold hover:text-white border-b border-c21Gold pb-1 transition-colors">
+                        <span>Browse 100+ Century 21 Listings on Property24</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Region Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mb-10">
+                <button onclick="filterProperties('all')" class="portfolio-filter-btn active-filter px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-c21Gold text-c21Black transition-all">All Listings</button>
+                <button onclick="filterProperties('marloth')" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-c21Slate hover:bg-c21Border text-slate-300 transition-all">Marloth Park</button>
+                <button onclick="filterProperties('malelane')" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-c21Slate hover:bg-c21Border text-slate-300 transition-all">Malelane</button>
+                <button onclick="filterProperties('komatipoort')" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-c21Slate hover:bg-c21Border text-slate-300 transition-all">Komatipoort</button>
+            </div>
+
+            <!-- Listings Grid -->
+            <div id="listingsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Listing 1 (Marloth Park) -->
+                <div class="property-card marloth c21-glass-panel rounded-2xl overflow-hidden group hover:border-c21Gold transition-all duration-300 flex flex-col justify-between">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80" alt="Marloth Riverfront" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-c21Black/90 backdrop-blur-md border-l-2 border-c21Gold text-white px-3 py-1 text-xs font-c21 font-bold uppercase">
+                            Marloth Park Riverfront
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white font-mono font-bold px-3 py-1 rounded text-sm border-b-2 border-c21Gold">
+                            R 12,500,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-c21 font-bold text-xl uppercase text-white mb-2 group-hover:text-c21Gold transition-colors">Crocodile River Safari Mansion</h3>
+                        <p class="text-c21Muted text-xs leading-relaxed mb-4 line-clamp-2">Direct border position fronting the Kruger National Park fence line. Double volume wooden deck, swimming pool, and dedicated boma.</p>
+                        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-c21Border pt-4 mb-4 font-medium">
+                            <span><i class="fa-solid fa-bed text-c21Gold mr-1"></i> 5 Beds</span>
+                            <span><i class="fa-solid fa-bath text-c21Gold mr-1"></i> 5 Baths</span>
+                            <span><i class="fa-solid fa-car text-c21Gold mr-1"></i> 2 Garages</span>
+                            <span><i class="fa-solid fa-maximize text-c21Gold mr-1"></i> 2,850 m²</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] text-c21Gold font-medium">Agent: Marion Ten Cate</span>
+                            <button onclick="openBookingModal('Crocodile River Safari Mansion - R12.5M')" class="py-2 px-4 rounded-lg bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 text-xs tracking-wider uppercase font-bold transition-all">
+                                Arrange Tour
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 2 (Malelane) -->
+                <div class="property-card malelane c21-glass-panel rounded-2xl overflow-hidden group hover:border-c21Gold transition-all duration-300 flex flex-col justify-between">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Malelane Golf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-c21Black/90 backdrop-blur-md border-l-2 border-c21Gold text-white px-3 py-1 text-xs font-c21 font-bold uppercase">
+                            Malelane River Estate
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white font-mono font-bold px-3 py-1 rounded text-sm border-b-2 border-c21Gold">
+                            R 4,650,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-c21 font-bold text-xl uppercase text-white mb-2 group-hover:text-c21Gold transition-colors">Subtropical Fairway Villa</h3>
+                        <p class="text-c21Muted text-xs leading-relaxed mb-4 line-clamp-2">Located in an elite security estate minutes away from Malelane Kruger Gate. Lush lawns, swimming pool, and high ceilings.</p>
+                        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-c21Border pt-4 mb-4 font-medium">
+                            <span><i class="fa-solid fa-bed text-c21Gold mr-1"></i> 4 Beds</span>
+                            <span><i class="fa-solid fa-bath text-c21Gold mr-1"></i> 3 Baths</span>
+                            <span><i class="fa-solid fa-car text-c21Gold mr-1"></i> 2 Garages</span>
+                            <span><i class="fa-solid fa-maximize text-c21Gold mr-1"></i> 1,450 m²</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] text-c21Gold font-medium">Agent: Nanda O'Reilly</span>
+                            <button onclick="openBookingModal('Malelane Subtropical Fairway Villa - R4.65M')" class="py-2 px-4 rounded-lg bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 text-xs tracking-wider uppercase font-bold transition-all">
+                                Arrange Tour
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 3 (Marloth Park Bush Retreat) -->
+                <div class="property-card marloth c21-glass-panel rounded-2xl overflow-hidden group hover:border-c21Gold transition-all duration-300 flex flex-col justify-between">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Marloth Bush Lodge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-c21Black/90 backdrop-blur-md border-l-2 border-c21Gold text-white px-3 py-1 text-xs font-c21 font-bold uppercase">
+                            Marloth Park
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white font-mono font-bold px-3 py-1 rounded text-sm border-b-2 border-c21Gold">
+                            R 3,200,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-c21 font-bold text-xl uppercase text-white mb-2 group-hover:text-c21Gold transition-colors">African Thatched Hideaway</h3>
+                        <p class="text-c21Muted text-xs leading-relaxed mb-4 line-clamp-2">Authentic thatched roof architecture with splash pool and built-in braai where giraffe, kudu, and warthogs visit your patio daily.</p>
+                        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-c21Border pt-4 mb-4 font-medium">
+                            <span><i class="fa-solid fa-bed text-c21Gold mr-1"></i> 3 Beds</span>
+                            <span><i class="fa-solid fa-bath text-c21Gold mr-1"></i> 3 Baths</span>
+                            <span><i class="fa-solid fa-car text-c21Gold mr-1"></i> 1 Carport</span>
+                            <span><i class="fa-solid fa-maximize text-c21Gold mr-1"></i> 2,050 m²</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] text-c21Gold font-medium">Agent: Marina Kruger</span>
+                            <button onclick="openBookingModal('African Thatched Hideaway - R3.2M')" class="py-2 px-4 rounded-lg bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 text-xs tracking-wider uppercase font-bold transition-all">
+                                Arrange Tour
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 4 (Komatipoort River Property) -->
+                <div class="property-card komatipoort c21-glass-panel rounded-2xl overflow-hidden group hover:border-c21Gold transition-all duration-300 flex flex-col justify-between">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Komatipoort River" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-c21Black/90 backdrop-blur-md border-l-2 border-c21Gold text-white px-3 py-1 text-xs font-c21 font-bold uppercase">
+                            Komatipoort
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white font-mono font-bold px-3 py-1 rounded text-sm border-b-2 border-c21Gold">
+                            R 2,850,000
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-c21 font-bold text-xl uppercase text-white mb-2 group-hover:text-c21Gold transition-colors">Komati River Golf Estate</h3>
+                        <p class="text-c21Muted text-xs leading-relaxed mb-4 line-clamp-2">Prime river and border proximity. Perfect holiday investment home with modern kitchen and entertainment deck.</p>
+                        <div class="flex items-center justify-between text-xs text-slate-400 border-t border-c21Border pt-4 mb-4 font-medium">
+                            <span><i class="fa-solid fa-bed text-c21Gold mr-1"></i> 3 Beds</span>
+                            <span><i class="fa-solid fa-bath text-c21Gold mr-1"></i> 2 Baths</span>
+                            <span><i class="fa-solid fa-car text-c21Gold mr-1"></i> 2 Garages</span>
+                            <span><i class="fa-solid fa-maximize text-c21Gold mr-1"></i> 1,200 m²</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] text-c21Gold font-medium">Agent: Michelle Scholtz</span>
+                            <button onclick="openBookingModal('Komati River Golf Estate - R2.85M')" class="py-2 px-4 rounded-lg bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 text-xs tracking-wider uppercase font-bold transition-all">
+                                Arrange Tour
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CENTURY 21 KRUGER SOUTH AGENTS & SPECIALISTS -->
+    <section id="team-agents" class="py-24 px-6 md:px-12 bg-c21Charcoal border-t border-c21Border">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <span class="font-c21 font-bold text-xs tracking-tight text-white uppercase">CENTURY 21</span>
+                    <span class="text-[9px] font-bold text-c21Gold">®</span>
+                    <span class="font-c21 font-light text-[10px] tracking-[0.25em] text-c21Gold uppercase">The Relentless</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-3xl md:text-5xl uppercase tracking-tight text-white mb-3">
+                    Meet Our Lowveld Specialists
+                </h2>
+                <div class="w-20 h-0.5 bg-c21Gold mx-auto mb-4"></div>
+                <p class="text-c21Muted text-sm">
+                    Accredited Property Practitioners delivering extraordinary real estate experiences across the Greater Kruger corridor.
+                </p>
+            </div>
+
+            <!-- Agent Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Agent 1: Marion Ten Cate -->
+                <div class="c21-glass-panel rounded-2xl p-6 text-center group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-c21Gold/70 group-hover:scale-105 transition-transform">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Marion Ten Cate" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-c21 font-bold text-base text-white uppercase mb-1">Marion Ten Cate</h3>
+                    <p class="text-xs text-c21Gold font-medium mb-3">Principal / Master Practitioner</p>
+                    <p class="text-c21Muted text-xs mb-4">Marloth Park & Kruger Riverfront Specialist with over 15 years in luxury bushveld transfers.</p>
+                    <div class="flex justify-center space-x-3 text-sm">
+                        <a href="tel:+27828014888" class="w-9 h-9 rounded-full bg-c21Black hover:bg-c21Gold text-c21Gold hover:text-c21Black flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/27828014888" target="_blank" class="w-9 h-9 rounded-full bg-c21Black hover:bg-emerald-600 text-c21Gold hover:text-white flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Agent 2: Nanda O'Reilly -->
+                <div class="c21-glass-panel rounded-2xl p-6 text-center group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-c21Gold/70 group-hover:scale-105 transition-transform">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Nanda O'Reilly" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-c21 font-bold text-base text-white uppercase mb-1">Nanda O'Reilly</h3>
+                    <p class="text-xs text-c21Gold font-medium mb-3">Senior Bushveld Specialist</p>
+                    <p class="text-c21Muted text-xs mb-4">Expert in Marloth holiday properties, title deed transfers, and off-grid safari architectures.</p>
+                    <div class="flex justify-center space-x-3 text-sm">
+                        <a href="tel:+27828014888" class="w-9 h-9 rounded-full bg-c21Black hover:bg-c21Gold text-c21Gold hover:text-c21Black flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/27828014888" target="_blank" class="w-9 h-9 rounded-full bg-c21Black hover:bg-emerald-600 text-c21Gold hover:text-white flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Agent 3: Marina Kruger -->
+                <div class="c21-glass-panel rounded-2xl p-6 text-center group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-c21Gold/70 group-hover:scale-105 transition-transform">
+                        <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Marina Kruger" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-c21 font-bold text-base text-white uppercase mb-1">Marina Kruger</h3>
+                    <p class="text-xs text-c21Gold font-medium mb-3">Residential & Estate Broker</p>
+                    <p class="text-c21Muted text-xs mb-4">Malelane and golf estate advisory with focus on secure gated communities and family homes.</p>
+                    <div class="flex justify-center space-x-3 text-sm">
+                        <a href="tel:+27828014888" class="w-9 h-9 rounded-full bg-c21Black hover:bg-c21Gold text-c21Gold hover:text-c21Black flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/27828014888" target="_blank" class="w-9 h-9 rounded-full bg-c21Black hover:bg-emerald-600 text-c21Gold hover:text-white flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Agent 4: Michelle Scholtz -->
+                <div class="c21-glass-panel rounded-2xl p-6 text-center group hover:border-c21Gold transition-all duration-300">
+                    <div class="w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden border-2 border-c21Gold/70 group-hover:scale-105 transition-transform">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Michelle Scholtz" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-c21 font-bold text-base text-white uppercase mb-1">Michelle Scholtz</h3>
+                    <p class="text-xs text-c21Gold font-medium mb-3">Commercial & Agricultural Advisor</p>
+                    <p class="text-c21Muted text-xs mb-4">Advising on Komatipoort river estates, commercial syndicates, and farm allocations.</p>
+                    <div class="flex justify-center space-x-3 text-sm">
+                        <a href="tel:+27828014888" class="w-9 h-9 rounded-full bg-c21Black hover:bg-c21Gold text-c21Gold hover:text-c21Black flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/27828014888" target="_blank" class="w-9 h-9 rounded-full bg-c21Black hover:bg-emerald-600 text-c21Gold hover:text-white flex items-center justify-center transition-colors border border-c21Border">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OFFICE DETAILS & HEADQUARTERS -->
+    <section id="agency-info" class="py-24 px-6 md:px-12 bg-c21Black border-t border-c21Border">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="font-c21 font-bold text-xs tracking-tight text-white uppercase">CENTURY 21</span>
+                    <span class="text-[9px] font-bold text-c21Gold">®</span>
+                    <span class="font-c21 font-light text-[10px] tracking-[0.25em] text-c21Gold uppercase">Global Reach. Local Mastery.</span>
+                </div>
+                <h2 class="font-c21 font-extrabold text-3xl md:text-5xl uppercase tracking-tight text-white mb-3">
+                    Your Gateway To The Southern Kruger
+                </h2>
+                <div class="w-20 h-0.5 bg-c21Gold mb-6"></div>
+                <p class="text-slate-200 text-base leading-relaxed mb-6 font-serif italic text-xl">
+                    “Defying mediocrity and delivering extraordinary real estate experiences across Malelane, Marloth Park, and Komatipoort.”
+                </p>
+                <p class="text-c21Muted text-sm leading-relaxed mb-6">
+                    Century 21 Kruger South combines the immense international marketing horsepower of the world’s most recognized residential real estate brand with deep, generational bushveld expertise.
+                </p>
+
+                <!-- Credentials -->
+                <div class="grid grid-cols-2 gap-4 border-t border-c21Border pt-6">
+                    <div>
+                        <span class="block text-3xl font-bold text-white font-mono">14,000+</span>
+                        <span class="text-xs text-c21Gold uppercase tracking-wider">Offices Globally</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-bold text-white font-mono">100%</span>
+                        <span class="text-xs text-c21Gold uppercase tracking-wider">PPRA South Africa Certified</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malelane Office Card -->
+            <div class="c21-glass-panel p-8 md:p-10 rounded-3xl relative">
+                <div class="border-b border-c21Border pb-6 mb-6">
+                    <div class="flex items-start mb-2">
+                        <span class="font-c21 font-extrabold text-2xl tracking-tight text-white uppercase">CENTURY 21</span>
+                        <span class="text-[10px] font-bold text-c21Gold ml-0.5">®</span>
+                    </div>
+                    <p class="text-xs text-c21Gold font-c21 tracking-widest uppercase">Kruger South • Malelane Head Office</p>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-200">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-c21Gold mt-1"></i>
+                        <span>Potters Place, 20 Air Street, Malelane, 1320, Mpumalanga, South Africa</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-c21Gold"></i>
+                        <a href="tel:+27828014888" class="hover:text-c21Gold transition-colors">+27 (0)82 801 4888 / +27 (0)13 790 0340</a>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope text-c21Gold"></i>
+                        <a href="mailto:krugersouth@century21.co.za" class="hover:text-c21Gold transition-colors">krugersouth@century21.co.za</a>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-clock text-c21Gold"></i>
+                        <span>Mon – Fri: 08:00 – 17:00 | Saturday & Sunday by safari appointment</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-c21Border">
+                    <button onclick="openBookingModal('General Agent Consultation')" class="w-full bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl transition-all shadow-lg">
+                        Schedule Private Broker Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-c21Border py-12 px-6 md:px-12 text-c21Muted text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-start">
+                    <span class="font-c21 font-extrabold text-lg tracking-tight text-white uppercase">CENTURY 21</span>
+                    <span class="text-[8px] font-bold text-c21Gold ml-0.5">®</span>
+                </div>
+                <span class="font-c21 font-light text-[8px] tracking-[0.35em] text-c21Gold uppercase -mt-0.5 mb-2">Kruger South</span>
+                <p class="text-[10px] text-slate-500">Each Office is Independently Owned and Operated. Fully Registered with PPRA South Africa.</p>
+            </div>
+
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="text-c21Gold hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-c21Gold hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-c21Gold hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="text-c21Gold hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            
+            <p class="text-[11px] text-slate-500">
+                &copy; <span id="year"></span> Century 21 Kruger South. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="c21-glass-panel w-full max-w-lg p-8 rounded-3xl relative border border-c21Gold/40 shadow-2xl scale-95 transition-transform duration-300" id="bookingModalCard">
+            <!-- Close Button -->
+            <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span class="text-[10px] font-c21 text-c21Gold tracking-widest uppercase font-bold block mb-1">VIP Viewing Appointment</span>
+            <h3 class="font-c21 font-extrabold text-2xl uppercase tracking-tight text-white mb-1">Book Private Safari Tour</h3>
+            <div class="w-16 h-0.5 bg-c21Gold mb-3"></div>
+            <p class="text-xs text-c21Muted mb-6">A designated Century 21 Kruger South broker will arrange gate access and private property inspections.</p>
+
+            <form onsubmit="submitViewingForm(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block uppercase tracking-wider text-c21Gold text-[10px] mb-1">Property Of Interest</label>
+                    <input type="text" id="modalPropertyInterest" class="w-full bg-black/60 border border-c21Border rounded-lg px-3 py-2 text-white focus:outline-none focus:border-c21Gold" readonly>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block uppercase tracking-wider text-slate-300 text-[10px] mb-1">Full Name</label>
+                        <input type="text" required placeholder="Johnathan Doe" class="w-full bg-black/60 border border-c21Border rounded-lg px-3 py-2 text-white focus:outline-none focus:border-c21Gold">
+                    </div>
+                    <div>
+                        <label class="block uppercase tracking-wider text-slate-300 text-[10px] mb-1">Phone (with country code)</label>
+                        <input type="tel" required placeholder="+27 ..." class="w-full bg-black/60 border border-c21Border rounded-lg px-3 py-2 text-white focus:outline-none focus:border-c21Gold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block uppercase tracking-wider text-slate-300 text-[10px] mb-1">Email Address</label>
+                    <input type="email" required placeholder="client@luxuryportfolio.com" class="w-full bg-black/60 border border-c21Border rounded-lg px-3 py-2 text-white focus:outline-none focus:border-c21Gold">
+                </div>
+
+                <div>
+                    <label class="block uppercase tracking-wider text-slate-300 text-[10px] mb-1">Preferred Inspection Date & Notes</label>
+                    <textarea rows="2" placeholder="Traveling to Malelane this weekend..." class="w-full bg-black/60 border border-c21Border rounded-lg px-3 py-2 text-white focus:outline-none focus:border-c21Gold resize-none"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtnText" class="w-full bg-c21Gold hover:bg-c21GoldHover text-c21Black font-c21 font-bold text-xs uppercase tracking-widest py-3 rounded-xl transition-all mt-4">
+                    Confirm Inspection Request
+                </button>
+            </form>
+
+            <div id="bookingConfirmation" class="hidden text-center py-6">
+                <i class="fa-solid fa-check-circle text-4xl text-c21Gold mb-3"></i>
+                <h4 class="font-c21 font-bold text-xl uppercase tracking-tight text-white mb-1">Viewing Inquiry Registered</h4>
+                <div class="w-12 h-0.5 bg-c21Gold mx-auto mb-3"></div>
+                <p class="text-xs text-c21Muted">The Century 21 Kruger South team will reach out via WhatsApp / Phone to confirm your private gate permit and safari itinerary.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: CLEAN, EFFICIENT SCROLL-DRIVEN VIDEO ENGINE -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 1. Elements
+        const video = document.getElementById('scrubVideo');
+        const safariTour = document.getElementById('safari-tour');
+        const hudScrollFill = document.getElementById('hudScrollFill');
+        const timeCounter = document.getElementById('timeCounter');
+        const scrollCtaPrompt = document.getElementById('scrollCtaPrompt');
+        const loadingScreen = document.getElementById('loadingScreen');
+        const loadProgressBar = document.getElementById('loadProgressBar');
+        const loadingStatusText = document.getElementById('loadingStatusText');
+        const videoFileInput = document.getElementById('videoFileInput');
+
+        // Milestones
+        const milestones = [
+            { el: document.getElementById('milestone-1'), start: 0.00, end: 0.22 },
+            { el: document.getElementById('milestone-2'), start: 0.25, end: 0.50 },
+            { el: document.getElementById('milestone-3'), start: 0.55, end: 0.75 },
+            { el: document.getElementById('milestone-4'), start: 0.80, end: 1.00 }
+        ];
+
+        // 2. Playback State
+        let videoDuration = 8.0;
+        let isVideoReady = false;
+        let targetProgress = 0;
+        let currentProgress = 0;
+        const LERP_FACTOR = 0.08;
+
+        // Calculate progress (0 to 1) through the video section
+        function calculateScrollProgress() {
+            const rect = safariTour.getBoundingClientRect();
+            const totalDistance = safariTour.offsetHeight - window.innerHeight;
+            if (totalDistance <= 0) return 0;
+            const scrolled = -rect.top;
+            return Math.max(0, Math.min(1, scrolled / totalDistance));
+        }
+
+        // Initialize Video
+        function initializeVideo() {
+            video.pause();
+            video.currentTime = 0;
+
+            if (video.duration && !isNaN(video.duration) && video.duration > 0) {
+                videoDuration = video.duration;
+            }
+
+            loadProgressBar.style.width = '100%';
+            loadingStatusText.textContent = 'Century 21 Experience Ready';
+
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.pointerEvents = 'none';
+                isVideoReady = true;
+                requestAnimationFrame(updatePlaybackLoop);
+            }, 300);
+        }
+
+        video.addEventListener('loadedmetadata', () => {
+            if (video.duration && !isNaN(video.duration)) {
+                videoDuration = video.duration;
+            }
+            initializeVideo();
+        });
+
+        // Fallback if metadata already fired
+        setTimeout(() => {
+            if (!isVideoReady) initializeVideo();
+        }, 1200);
+
+        // 3. Smooth requestAnimationFrame Lerp Loop
+        function updatePlaybackLoop() {
+            targetProgress = calculateScrollProgress();
+            
+            // Linear interpolation for silky responsiveness
+            currentProgress += (targetProgress - currentProgress) * LERP_FACTOR;
+            
+            if (Math.abs(targetProgress - currentProgress) < 0.0005) {
+                currentProgress = targetProgress;
+            }
+
+            const clampedProgress = Math.max(0, Math.min(1, currentProgress));
+            const targetTime = clampedProgress * videoDuration;
+
+            // Non-blocking seek guard
+            if (!video.seeking && Math.abs(video.currentTime - targetTime) > 0.03) {
+                try {
+                    video.currentTime = targetTime;
+                } catch (e) {}
+            }
+
+            // HUD Progress Bar & Time
+            hudScrollFill.style.width = `${clampedProgress * 100}%`;
+
+            const formatSec = (s) => {
+                const mins = Math.floor(s / 60);
+                const secs = Math.floor(s % 60);
+                return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            };
+            timeCounter.textContent = `${formatSec(video.currentTime || targetTime)} / ${formatSec(videoDuration)}`;
+
+            if (clampedProgress > 0.05) {
+                scrollCtaPrompt.style.opacity = '0';
+            } else {
+                scrollCtaPrompt.style.opacity = '1';
+            }
+
+            // Milestone visibility
+            milestones.forEach((m) => {
+                if (clampedProgress >= m.start && clampedProgress <= m.end) {
+                    m.el.style.opacity = '1';
+                    m.el.style.transform = 'translateY(0)';
+                    m.el.style.pointerEvents = 'auto';
+                } else {
+                    m.el.style.opacity = '0';
+                    m.el.style.transform = 'translateY(24px)';
+                    m.el.style.pointerEvents = 'none';
+                }
+            });
+
+            requestAnimationFrame(updatePlaybackLoop);
+        }
+
+        // Local video file picker
+        videoFileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                video.src = fileURL;
+                video.load();
+                loadingScreen.style.opacity = '1';
+                loadingScreen.style.pointerEvents = 'auto';
+                loadingStatusText.textContent = 'Loading selected video...';
+                loadProgressBar.style.width = '60%';
+            }
+        });
+
+        // 4. Synthesized Bushveld Acoustics (Web Audio API)
+        let audioCtx = null;
+        let isAudioPlaying = false;
+        let ambientOscillator = null;
+        let ambientGain = null;
+
+        function toggleBushveldAudio() {
+            const icon = document.getElementById('audioIcon');
+            const label = document.getElementById('audioLabel');
+
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
+            if (!isAudioPlaying) {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                const bufferSize = audioCtx.sampleRate * 2;
+                const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const output = noiseBuffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    output[i] = Math.random() * 2 - 1;
+                }
+
+                const whiteNoise = audioCtx.createBufferSource();
+                whiteNoise.buffer = noiseBuffer;
+                whiteNoise.loop = true;
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(400, audioCtx.currentTime);
+
+                ambientGain = audioCtx.createGain();
+                ambientGain.gain.setValueAtTime(0.035, audioCtx.currentTime);
+
+                whiteNoise.connect(filter);
+                filter.connect(ambientGain);
+                ambientGain.connect(audioCtx.destination);
+
+                whiteNoise.start(0);
+                ambientOscillator = whiteNoise;
+
+                isAudioPlaying = true;
+                icon.className = 'fa-solid fa-volume-high text-c21Gold';
+                label.textContent = 'Sound On';
+            } else {
+                if (ambientGain) {
+                    ambientGain.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.4);
+                    setTimeout(() => {
+                        if (ambientOscillator) {
+                            ambientOscillator.stop();
+                            ambientOscillator = null;
+                        }
+                    }, 400);
+                }
+                isAudioPlaying = false;
+                icon.className = 'fa-solid fa-volume-xmark text-c21Gold';
+                label.textContent = 'Ambience';
+            }
+        }
+
+        // 5. Portfolio Filtering
+        function filterProperties(category) {
+            const cards = document.querySelectorAll('.property-card');
+            const buttons = document.querySelectorAll('.portfolio-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-c21Gold', 'text-c21Black');
+                btn.classList.add('bg-c21Slate', 'text-slate-300');
+            });
+            event.target.classList.remove('bg-c21Slate', 'text-slate-300');
+            event.target.classList.add('bg-c21Gold', 'text-c21Black');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 6. Booking Modal Controls
+        const bookingModal = document.getElementById('bookingModal');
+        const bookingModalCard = document.getElementById('bookingModalCard');
+        const modalPropertyInterest = document.getElementById('modalPropertyInterest');
+
+        function openBookingModal(propertyName) {
+            modalPropertyInterest.value = propertyName || 'Century 21 Kruger South Portfolio';
+            bookingModal.classList.remove('pointer-events-none', 'opacity-0');
+            bookingModal.classList.add('pointer-events-auto', 'opacity-100');
+            bookingModalCard.classList.remove('scale-95');
+            bookingModalCard.classList.add('scale-100');
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.remove('pointer-events-auto', 'opacity-100');
+            bookingModal.classList.add('pointer-events-none', 'opacity-0');
+            bookingModalCard.classList.remove('scale-100');
+            bookingModalCard.classList.add('scale-95');
+        }
+
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                closeBookingModal();
+            }
+        });
+
+        function submitViewingForm(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtnText');
+            submitBtn.textContent = 'Dispatching to Malelane Broker...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                e.target.classList.add('hidden');
+                document.getElementById('bookingConfirmation').classList.remove('hidden');
+                setTimeout(() => {
+                    closeBookingModal();
+                    setTimeout(() => {
+                        e.target.classList.remove('hidden');
+                        document.getElementById('bookingConfirmation').classList.add('hidden');
+                        submitBtn.textContent = 'Confirm Inspection Request';
+                        submitBtn.disabled = false;
+                        e.target.reset();
+                    }, 500);
+                }, 2600);
+            }, 800);
+        }
+
+        // Navbar shrink on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 80) {
+                nav.classList.add('py-2', 'bg-c21Black/95', 'shadow-2xl');
+                nav.classList.remove('py-3.5');
+            } else {
+                nav.classList.add('py-3.5');
+                nav.classList.remove('py-2', 'shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
